@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EFCore.Application.Contracts\EFCore.Application.Contracts.csproj" />
+    <ProjectReference Include="..\EFCoreDemo.Domain\EFCoreDemo.Domain.csproj" />
   </ItemGroup>
 
 </Project>
