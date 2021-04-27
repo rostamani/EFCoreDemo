@@ -1,0 +1,14 @@
+﻿@page "{id:int}"
+@model EFCoreDemo.Web.Pages.ProductCategory.EditModel
+@{
+}
+
+
+<form method="post">
+    <input type="hidden" asp-for="@Model.EditProductCategory.Id" />
+    <div class="form-group">
+        <label asp-for="@Model.EditProductCategory.Name">Name:</label>
+        <input asp-for="@Model.EditProductCategory.Name" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

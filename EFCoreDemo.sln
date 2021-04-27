@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domian", "Domian", "{DE560FD8-14EB-4178-8839-585857F73664}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreDemo.Domain", "EFCoreDemo.Domain\EFCoreDemo.Domain.csproj", "{B2C5ED01-B565-4159-8BEE-D57187B7D754}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreDemo.Domain", "EFCoreDemo.Domain\EFCoreDemo.Domain.csproj", "{B2C5ED01-B565-4159-8BEE-D57187B7D754}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{1CB6F05D-93CB-4147-856A-7DF351E429D0}"
 EndProject
@@ -13,17 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{A6CB67FA-763B-4F89-978E-F32D6E8EAD31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreDemo.Web", "EFCoreDemo.Web\EFCoreDemo.Web.csproj", "{FC63ED98-C2A0-4A23-826A-72E48F89987D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreDemo.Web", "EFCoreDemo.Web\EFCoreDemo.Web.csproj", "{FC63ED98-C2A0-4A23-826A-72E48F89987D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{E7D9A14E-431A-4EA8-9C5A-0A5107554CD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreDemo.Helpers", "EFCoreDemo.Helpers\EFCoreDemo.Helpers.csproj", "{D207C026-7128-496E-B85B-FA716060668E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreDemo.Helpers", "EFCoreDemo.Helpers\EFCoreDemo.Helpers.csproj", "{D207C026-7128-496E-B85B-FA716060668E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.Infrastructure.EFCore", "EFCore.Infrastructure.EFCore\EFCore.Infrastructure.EFCore.csproj", "{E255DFFF-9670-4623-9091-9A39429A54C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.Infrastructure.EFCore", "EFCore.Infrastructure.EFCore\EFCore.Infrastructure.EFCore.csproj", "{E255DFFF-9670-4623-9091-9A39429A54C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.Application.Contracts", "EFCore.Application.Contracts\EFCore.Application.Contracts.csproj", "{06820221-C12E-49A6-9515-95185926688A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.Application.Contracts", "EFCore.Application.Contracts\EFCore.Application.Contracts.csproj", "{06820221-C12E-49A6-9515-95185926688A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.Application", "EFCore.Application\EFCore.Application.csproj", "{61A1B24B-0FF0-4F80-A958-CD54D4B3784D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.Application", "EFCore.Application\EFCore.Application.csproj", "{61A1B24B-0FF0-4F80-A958-CD54D4B3784D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

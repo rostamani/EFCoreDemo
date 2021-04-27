@@ -8,6 +8,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EFCore.Application;
+using EFCore.Application.Contracts.ProductCategory;
+using EFCore.Domain.ProductCategoryAgg;
+using EFCore.Infrastructure.EFCore;
+using EFCore.Infrastructure.EFCore.Repository;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCoreDemo.Web
 {
@@ -23,7 +29,12 @@ namespace EFCoreDemo.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
+
+
+            services.AddDbContext<EfContext>(options => { options.UseSqlServer(Configuration.GetConnectionString("EFCoreDemo")); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,33 @@
+﻿@page "{name?}"
+@model EFCoreDemo.Web.Pages.ProductCategory.IndexModel
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">Product categories</h1>
+    <p><a class="btn btn-primary" asp-page="Create">Create new product category</a>.</p>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Creation Date</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model.ProductCategories)
+            {
+                <tr>
+                    <td>@category.Id</td>
+                    <td>@category.Name</td>
+                    <td>@category.CreationDate</td>
+                    <td>
+                        <a class="btn btn-warning" asp-page="Edit" asp-route-id="@category.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
