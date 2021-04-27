@@ -36,7 +36,7 @@ namespace EFCore.Application
             }
         }
 
-        public List<ProductViewModel> Search(ProductSearchModel command)
+        public List<ProductViewModel> Search(string command)
         {
             return _productRepository.Search(command);
         }

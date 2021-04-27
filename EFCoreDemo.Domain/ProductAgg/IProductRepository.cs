@@ -9,7 +9,7 @@ namespace EFCore.Domain.ProductAgg
     {
 
         Product Get(int id);
-        List<ProductViewModel> Search(ProductSearchModel searchModel);
+        List<ProductViewModel> Search(string searchModel);
         EditProduct GetDetails(int id);
         bool Exists(string name, int categoryId);
         void Create(Product product);

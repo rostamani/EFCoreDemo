@@ -8,7 +8,7 @@ namespace EFCore.Application.Contracts.Product
     {
         void Create(CreateProduct command);
         void Edit(EditProduct command);
-        List<ProductViewModel> Search(ProductSearchModel command);
+        List<ProductViewModel> Search(string command);
         EditProduct GetDetails(int id);
         void Remove(int id);
         void Restore(int id);

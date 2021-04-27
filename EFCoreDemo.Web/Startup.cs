@@ -9,7 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EFCore.Application;
+using EFCore.Application.Contracts.Product;
 using EFCore.Application.Contracts.ProductCategory;
+using EFCore.Domain.ProductAgg;
 using EFCore.Domain.ProductCategoryAgg;
 using EFCore.Infrastructure.EFCore;
 using EFCore.Infrastructure.EFCore.Repository;
@@ -32,6 +34,8 @@ namespace EFCoreDemo.Web
             services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
+            services.AddTransient<IProductApplication, ProductApplication>();
+            services.AddTransient<IProductRepository, ProductRepository>();
 
 
             services.AddDbContext<EfContext>(options => { options.UseSqlServer(Configuration.GetConnectionString("EFCoreDemo")); });

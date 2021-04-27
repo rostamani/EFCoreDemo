@@ -1,0 +1,53 @@
+﻿@page
+@model EFCoreDemo.Web.Pages.Products.IndexModel
+@{
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Product categories</h1>
+    <p><a class="btn btn-primary" asp-page="Create">Create new product</a>.</p>
+    <hr />
+
+    <form class="form-inline">
+        <label>Name:</label>
+        <input class="form-control" type="text" name="name">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <br />
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Unit Price</th>
+            <th>Creation Date</th>
+            <th>Operations</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.ProductId</td>
+                <td>@product.Name</td>
+                <td>@product.Category</td>
+                <td>@product.UnitPrice</td>
+                <td>@product.CreationDate</td>
+                <td>
+                    <a class="btn btn-warning" asp-page="Edit" asp-route-id="@product.ProductId">Edit</a>
+                    @if (product.IsRemoved)
+                    {
+                        <a class="btn btn-success" asp-page="Index" asp-page-handler="Restore" asp-route-id="@product.ProductId">Restore</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-danger" asp-page="Index" asp-page-handler="Remove" asp-route-id="@product.ProductId">Remove</a>
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

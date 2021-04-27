@@ -41,7 +41,7 @@ namespace EFCore.Infrastructure.EFCore.Repository
 
         }
 
-        public List<ProductViewModel> Search(ProductSearchModel searchModel)
+        public List<ProductViewModel> Search(string searchModel)
         {
             var query = _db.Products.Include(p => p.ProductCategory)
                 .Select(p => new ProductViewModel()
@@ -50,19 +50,16 @@ namespace EFCore.Infrastructure.EFCore.Repository
                     Category = p.ProductCategory.Name,
                     CreationDate = p.CreationDate.ToPersianDate(),
                     ProductId = p.ProductId,
-                    UnitPrice = p.UnitPrice
+                    UnitPrice = p.UnitPrice,
+                    IsRemoved = p.IsRemoved
                 });
 
-            if (searchModel.IsRemoved)
+            if ((!string.IsNullOrWhiteSpace(searchModel)))
             {
-                query=query.Where(p => p.IsRemoved == searchModel.IsRemoved);
-            }
-            if ((!string.IsNullOrWhiteSpace(searchModel.Name)))
-            {
-                query = query.Where(p => p.Name.Contains(searchModel.Name));
+                query = query.Where(p => p.Name.Contains(searchModel));
             }
 
-            return query.OrderBy(p => p.Name).ThenByDescending(p => p.ProductId).AsNoTracking().ToList();
+            return query.OrderBy(p => p.IsRemoved).ThenBy(p=>p.Name).ThenByDescending(p => p.ProductId).AsNoTracking().ToList();
 
 
         }

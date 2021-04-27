@@ -1,0 +1,25 @@
+﻿@page
+@model EFCoreDemo.Web.Pages.Products.CreateModel
+@{
+}
+
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="CreateProduct.Name">Name:</label>
+        <input class="form-control" asp-for="CreateProduct.Name">
+        <span asp-validation-for="CreateProduct.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CreateProduct.UnitPrice">Price:</label>
+        <input class="form-control" asp-for="CreateProduct.UnitPrice">
+        <span asp-validation-for="CreateProduct.UnitPrice" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CreateProduct.CategoryId">Category:</label>
+        <select asp-items="Model.Categories" class="form-control" asp-for="CreateProduct.CategoryId"></select>
+        <span asp-validation-for="CreateProduct.CategoryId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
